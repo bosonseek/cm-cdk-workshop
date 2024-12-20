@@ -1,0 +1,29 @@
+{
+  "name": "cm-cdk-workshop",
+  "version": "0.0.0",
+  "license": "None",
+  "author": {
+    "name": "candidate-management"
+  },
+  "main": "./src/index.ts",
+  "scripts": {
+    "deploy": "cdk deploy ${STACK_NAME} --require-approval never --context stage=${ENVIRONMENT} --context gitSha=${BUILDKITE_COMMIT}",
+    "format": "skuba format",
+    "lint": "skuba lint --serial",
+    "lint-and-test": "npm-run-all lint test",
+    "test": "skuba test shared src infra --maxWorkers=1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "aws-cdk": "2.166.0",
+    "aws-cdk-lib": "2.166.0",
+    "constructs": "10.4.2",
+    "skuba": "9.1.0"
+  },
+  "skuba": {
+    "entryPoint": "src/hydrator/app.ts",
+    "template": null,
+    "type": "package",
+    "version": "9.1.0"
+  }
+}

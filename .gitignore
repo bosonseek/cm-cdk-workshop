@@ -1,0 +1,35 @@
+# managed by skuba
+.idea/*
+.vscode/*
+!.vscode/extensions.json
+
+.cdk.staging/
+.serverless/
+cdk.out/
+cdk.context.json
+node_modules*/
+
+/coverage*/
+/dist*/
+/lib*/
+/tmp*/
+
+.DS_Store
+.eslintcache
+.pnpm-debug.log
+*.tgz
+*.tsbuildinfo
+npm-debug.log
+package-lock.json
+yarn-error.log
+# end managed by skuba
+
+handler/node_modules/*
+bootstrap/node_modules/*
+cdk.context.json
+
+# Ignore .npmrc. This is no longer managed by skuba as pnpm projects use a managed .npmrc.
+# IMPORTANT: if migrating to pnpm, remove this line and add an .npmrc IN THE SAME COMMIT.
+# You can use `skuba format` to generate the file or otherwise commit an empty file.
+# Doing so will conflict with a local .npmrc and make it more difficult to unintentionally commit auth secrets.
+.npmrc

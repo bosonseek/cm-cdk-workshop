@@ -1,0 +1,5 @@
+{
+  "app": "npx ts-node --prefer-ts-exts infra/index.ts",
+  "context": {},
+  "progress": "events"
+}
