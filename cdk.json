@@ -1,5 +1,12 @@
 {
   "app": "npx ts-node --prefer-ts-exts infra/index.ts",
-  "context": {},
+  "context": {
+    "dev": {
+      "maxReceives": 1
+    },
+    "prod": {
+      "maxReceives": 5
+    }
+  },
   "progress": "events"
 }
